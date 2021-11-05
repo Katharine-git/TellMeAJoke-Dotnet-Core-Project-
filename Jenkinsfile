@@ -12,7 +12,7 @@ pipeline {
       steps {
         echo "Checking out from Git Repo";
     
-       git url: 'https://github.com/Katharine-git/DotNetCore_Application.git',
+       git url: 'https://github.com/Katharine-git/TellMeAJoke-Dotnet-Core-Project-.git',
         branch: 'master'
       }
     } 
