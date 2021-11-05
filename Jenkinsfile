@@ -65,17 +65,11 @@ pipeline {
     }
 
 
-    stage('Ok') {
-    steps {
-      echo "Ok"
-
-        }
-    }
-
     stage('email'){
     steps{
     environment {
         EMAIL_TO = 'katharinesheen@gmail.com'
+    }
     }
     }
     post {
@@ -97,7 +91,9 @@ pipeline {
     }
     
   }
+
 }
+
 
 }
 
