@@ -51,7 +51,7 @@ pipeline {
 
                       New-WebAppPool -Name dotnetcoredeploy -Force
 
-                      New-Website -Name dotnetcoredeploy -Port 82 -IPAddress * -HostHeader dotnetcoredeploy.com -PhysicalPath C:\Users\Administrator\Documents\DotNetApp\Project_1\TellMeAJoke\bin\Debug\netcoreapp3.1\publish -ApplicationPool dotnetcoredeploy -Force
+                      New-Website -Name dotnetcoredeploy -Port 82 -IPAddress * -HostHeader dotnetcoredeploy.com -PhysicalPath C:\\Users\\Administrator\\Documents\\DotNetApp\\Project_1\\TellMeAJoke\\bin\\Debug\\netcoreapp3.1\\publish -ApplicationPool dotnetcoredeploy -Force
 
                       New-WebBinding -Name dotnetcoredeploy -IPAddress "*" -Port 82 -Protocol http
                       
