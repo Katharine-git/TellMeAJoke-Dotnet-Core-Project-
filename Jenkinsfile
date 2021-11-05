@@ -64,22 +64,19 @@ pipeline {
 
     }
 
-    pipeline {
-    agent any
-     
-    stages {
-        stage('Ok') {
-            steps {
-                echo "Ok"
-            }
+
+    stage('Ok') {
+    steps {
+      echo "Ok"
         }
     }
+  
     post {
         always {
             emailext body: 'A Test E-Mail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
     }
-}
+
    
   
 
