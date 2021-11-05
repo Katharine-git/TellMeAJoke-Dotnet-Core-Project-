@@ -33,6 +33,9 @@ pipeline {
     }
 
     stage('Publish') {
+      when{
+        branch 'publish'
+      }
       steps {
         bat "dotnet publish  TellMeAJoke.csproj"
       }
