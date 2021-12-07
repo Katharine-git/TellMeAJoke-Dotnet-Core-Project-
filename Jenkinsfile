@@ -45,11 +45,10 @@ pipeline {
 
     stage ('Deploy')
     {
-    steps{
-      
-      when {
+       when {
         branch 'master'
       }
+    steps{
 
        powershell """ 
    
